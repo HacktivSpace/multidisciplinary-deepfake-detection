@@ -1,0 +1,47 @@
+import os
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import classification_report, confusion_matrix
+import joblib
+from src.models.bayesian import BayesianModel
+from src.dataset.data_loader import load_csv_data
+from src.config import config
+from src.utils.logger import setup_logger
+
+logger = setup_logger('bayesian_training_logger', os.path.join(config.LOG_DIR, 'bayesian_training.log'))
+
+def train_and_save_bayesian_model():
+    """
+    Training Bayesian model and saving as a pickle file.
+    """
+    logger.info("Loading and preprocessing data...")
+    # Loading and preprocessing data
+    data = load_csv_data(config.PROCESSED_DATA_FILE)
+    X = data.drop('label', axis=1)
+    y = data['label']
+
+    logger.info("Splitting data into training and validation sets...")
+    # Splitting data into training and validation sets
+    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    bayesian_model = BayesianModel(prior_mean=config.BAYESIAN_PARAMS['prior_mean'], prior_std=config.BAYESIAN_PARAMS['prior_std'])
+
+    logger.info("Training the Bayesian model...")
+
+    bayesian_model.fit(X_train.values, y_train.values)
+
+    logger.info("Evaluating the Bayesian model...")
+
+    y_pred = bayesian_model.predict(X_val.values)
+    report = classification_report(y_val, y_pred)
+    cm = confusion_matrix(y_val, y_pred)
+    logger.info(f"Classification Report:\n{report}")
+    logger.info(f"Confusion Matrix:\n{cm}")
+
+    model_path = os.path.join(config.MODEL_DIR, 'bayesian_model.pkl')
+    joblib.dump(bayesian_model, model_path)
+    logger.info(f"Bayesian model saved at {model_path}")
+
+if __name__ == "__main__":
+    train_and_save_bayesian_model()

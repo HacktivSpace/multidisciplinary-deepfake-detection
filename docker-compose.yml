@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: multidisciplinary_deepfake_detection_app
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+      - LOG_LEVEL=INFO
+      - DATABASE_URL=**[]**
+      - SECRET_KEY=**[]**
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 30s
+      timeout: 30s
+      retries: 3
+    entrypoint: ["/app/entrypoint.sh"]
+    command: ["python", "src/main.py"]
+
+  db:
+    image: postgres:13
+    container_name: multidisciplinary_deepfake_detection_db
+    environment:
+      - POSTGRES_DB=**[]**
+      - POSTGRES_USER=**[]**
+      - POSTGRES_PASSWORD=**[]**
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: "redis:6.2"
+    container_name: multidisciplinary_deepfake_detection_redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:

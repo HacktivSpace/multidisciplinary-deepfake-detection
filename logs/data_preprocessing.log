@@ -1,0 +1,14 @@
+2024-08-15 16:44:00,002 data_preprocessing INFO: Data preprocessing started.
+2024-08-15 16:44:00,004 data_preprocessing INFO: Loading raw data from data/raw/sample_data.csv.
+2024-08-15 16:44:00,053 data_preprocessing INFO: Raw data loaded successfully with shape (10000, 20).
+2024-08-15 16:44:00,055 data_preprocessing INFO: Dropping missing values.
+2024-08-15 16:44:00,058 data_preprocessing INFO: Missing values dropped. Data shape is now (9500, 20).
+2024-08-15 16:44:00,060 data_preprocessing INFO: Encoding categorical features.
+2024-08-15 16:44:00,085 data_preprocessing INFO: Categorical features encoded successfully.
+2024-08-15 16:44:00,086 data_preprocessing INFO: Normalizing numerical features.
+2024-08-15 16:44:00,115 data_preprocessing INFO: Numerical features normalized successfully.
+2024-08-15 16:44:00,117 data_preprocessing INFO: Splitting data into training and testing sets.
+2024-08-15 16:44:00,120 data_preprocessing INFO: Data split completed. Training data shape: (7600, 20), Testing data shape: (1900, 20).
+2024-08-15 16:44:00,122 data_preprocessing INFO: Saving processed data to data/processed/processed_data.csv.
+2024-08-15 16:44:00,128 data_preprocessing INFO: Processed data saved successfully.
+2024-08-15 16:44:00,130 data_preprocessing INFO: Data preprocessing completed.

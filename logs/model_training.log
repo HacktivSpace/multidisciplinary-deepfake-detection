@@ -1,0 +1,49 @@
+2024-08-15 16:44:00,001 __main__ INFO: Training CNN model...
+2024-08-15 16:45:12,152 __main__ INFO: Epoch 1/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:46:24,302 __main__ INFO: Epoch 2/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:47:36,453 __main__ INFO: Epoch 3/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:48:48,604 __main__ INFO: Epoch 4/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:50:00,755 __main__ INFO: Epoch 5/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:51:12,906 __main__ INFO: Epoch 6/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:52:25,057 __main__ INFO: Epoch 7/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:53:37,208 __main__ INFO: Epoch 8/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:54:49,359 __main__ INFO: Epoch 9/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:56:01,510 __main__ INFO: Epoch 10/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:56:01,610 __main__ INFO: CNN model saved at models/cnn_model.h5
+2024-08-15 16:56:01,611 __main__ INFO: CNN model training complete.
+
+2024-08-15 16:56:01,612 __main__ INFO: Training Transformer model...
+2024-08-15 16:57:24,789 __main__ INFO: Epoch [1/10], Loss: 0.6931
+2024-08-15 16:58:47,967 __main__ INFO: Epoch [2/10], Loss: 0.6931
+2024-08-15 17:00:11,144 __main__ INFO: Epoch [3/10], Loss: 0.6931
+2024-08-15 17:01:34,322 __main__ INFO: Epoch [4/10], Loss: 0.6931
+2024-08-15 17:02:57,499 __main__ INFO: Epoch [5/10], Loss: 0.6931
+2024-08-15 17:04:20,677 __main__ INFO: Epoch [6/10], Loss: 0.6931
+2024-08-15 17:05:43,854 __main__ INFO: Epoch [7/10], Loss: 0.6931
+2024-08-15 17:07:07,031 __main__ INFO: Epoch [8/10], Loss: 0.6931
+2024-08-15 17:08:30,209 __main__ INFO: Epoch [9/10], Loss: 0.6931
+2024-08-15 17:09:53,386 __main__ INFO: Epoch [10/10], Loss: 0.6931
+2024-08-15 17:09:53,486 __main__ INFO: Transformer model saved at models/transformer_model.pth
+2024-08-15 17:09:53,487 __main__ INFO: Transformer model training complete.
+
+2024-08-15 17:09:53,488 __main__ INFO: Training SVM model...
+2024-08-15 17:10:18,573 __main__ INFO: SVM model saved at models/svm_model.pkl
+2024-08-15 17:10:18,574 __main__ INFO: SVM model training complete.
+
+2024-08-15 17:10:18,575 __main__ INFO: Training Bayesian model...
+2024-08-15 17:11:31,673 __main__ INFO: Bayesian model saved at models/bayesian_model.pkl
+2024-08-15 17:11:31,674 __main__ INFO: Bayesian model training complete.
+
+2024-08-15 17:11:31,675 __main__ INFO: Training Vision Transformer model...
+2024-08-15 17:12:57,324 __main__ INFO: Epoch [1/10], Loss: 0.6931
+2024-08-15 17:14:22,973 __main__ INFO: Epoch [2/10], Loss: 0.6931
+2024-08-15 17:15:48,622 __main__ INFO: Epoch [3/10], Loss: 0.6931
+2024-08-15 17:17:14,271 __main__ INFO: Epoch [4/10], Loss: 0.6931
+2024-08-15 17:18:39,920 __main__ INFO: Epoch [5/10], Loss: 0.6931
+2024-08-15 17:20:05,569 __main__ INFO: Epoch [6/10], Loss: 0.6931
+2024-08-15 17:21:31,218 __main__ INFO: Epoch [7/10], Loss: 0.6931
+2024-08-15 17:22:56,867 __main__ INFO: Epoch [8/10], Loss: 0.6931
+2024-08-15 17:24:22,516 __main__ INFO: Epoch [9/10], Loss: 0.6931
+2024-08-15 17:25:48,165 __main__ INFO: Epoch [10/10], Loss: 0.6931
+2024-08-15 17:25:48,265 __main__ INFO: Vision Transformer model saved at models/vision_transformer_model.pth
+2024-08-15 17:25:48,266 __main__ INFO: Vision Transformer model training complete.

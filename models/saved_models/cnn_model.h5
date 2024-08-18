@@ -1,0 +1,81 @@
+import os
+import numpy as np
+import pandas as pd
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout, BatchNormalization
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.callbacks import ModelCheckpoint
+from sklearn.model_selection import train_test_split
+from src.config import config
+from src.dataset.data_loader import load_csv_data
+from src.utils.logger import setup_logger
+
+logger = setup_logger('cnn_training_logger', os.path.join(config.LOG_DIR, 'cnn_training.log'))
+
+def create_cnn_model(input_shape, num_classes):
+    """
+    Building a Convolutional Neural Network (CNN) model.
+    :param input_shape: Shape of the input data (height, width, channels)
+    :param num_classes: Number of classes for the output layer
+    :return: Compiled CNN model
+    """
+    model = Sequential()
+    
+    # Convolutional Layer 1
+    model.add(Conv2D(32, (3, 3), activation='relu', input_shape=input_shape))
+    model.add(BatchNormalization())
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    
+    # Convolutional Layer 2
+    model.add(Conv2D(64, (3, 3), activation='relu'))
+    model.add(BatchNormalization())
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    
+    # Convolutional Layer 3
+    model.add(Conv2D(128, (3, 3), activation='relu'))
+    model.add(BatchNormalization())
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+    
+    # Flattening Layer
+    model.add(Flatten())
+    
+    # Fully Connected Layer 1
+    model.add(Dense(256, activation='relu'))
+    model.add(Dropout(0.5))
+    
+    # Fully Connected Layer 2
+    model.add(Dense(128, activation='relu'))
+    model.add(Dropout(0.5))
+    
+    # Output Layer
+    model.add(Dense(num_classes, activation='softmax'))
+    
+    # Compiling the model
+    optimizer = Adam(learning_rate=0.001)
+    model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
+    
+    return model
+
+def train_and_save_cnn_model():
+    logger.info("Loading and preprocessing data...")
+    # Loading and preprocessing data
+    data = load_csv_data(config.PROCESSED_DATA_FILE)
+    X = data.drop('label', axis=1).values
+    y = pd.get_dummies(data['label']).values  # One-hot encode the labels
+
+    X = X.reshape(-1, 64, 64, 3)
+
+    logger.info("Splitting data into training and validation sets...")
+    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
+
+    model = create_cnn_model(input_shape=(64, 64, 3), num_classes=y.shape[1])
+
+    checkpoint = ModelCheckpoint(os.path.join(config.MODEL_DIR, 'cnn_model.h5'), monitor='val_accuracy', save_best_only=True, mode='max')
+
+    logger.info("Training the CNN model...")
+    history = model.fit(X_train, y_train, epochs=config.CNN_PARAMS['epochs'], batch_size=config.CNN_PARAMS['batch_size'], validation_data=(X_val, y_val), callbacks=[checkpoint])
+
+    logger.info("CNN model training complete and saved to cnn_model.h5")
+
+if __name__ == "__main__":
+    train_and_save_cnn_model()

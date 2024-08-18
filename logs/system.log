@@ -1,0 +1,172 @@
+2024-08-15 16:44:00,001 __main__ INFO: System initialization started.
+2024-08-15 16:44:00,002 __main__ INFO: Configuration loaded from src/config.py.
+2024-08-15 16:44:00,003 __main__ INFO: Logging setup completed using src/utils/logger.py.
+2024-08-15 16:44:00,004 __main__ INFO: Data loading module initialized from src/dataset/data_loader.py.
+2024-08-15 16:44:00,005 __main__ INFO: Data preprocessing module initialized from src/dataset/data_preprocessor.py.
+2024-08-15 16:44:00,006 __main__ INFO: Model architectures loaded: CNN from src/models/cnn.py, Transformer from src/models/transformer.py, SVM from src/models/svm.py, Bayesian from src/models/bayesian.py, Vision Transformer from src/models/vision_transformer.py.
+2024-08-15 16:44:00,007 __main__ INFO: Training scripts loaded from src/train.py.
+2024-08-15 16:44:00,008 __main__ INFO: Evaluation scripts loaded: CNN from src/evaluation/cnn_evaluation.py, Transformer from src/evaluation/transformer_evaluation.py, SVM from src/evaluation/svm_evaluation.py, Bayesian from src/evaluation/bayesian_evaluation.py, Vision Transformer from src/evaluation/vision_transformer_evaluation.py.
+2024-08-15 16:44:00,009 __main__ INFO: System setup completed. Ready to execute tasks.
+
+2024-08-15 16:44:10,010 __main__ INFO: Starting data loading process.
+2024-08-15 16:44:10,011 src.dataset.data_loader INFO: Loading data from data/raw/sample_data.csv.
+2024-08-15 16:44:12,015 src.dataset.data_loader INFO: Data loading completed.
+
+2024-08-15 16:44:15,020 __main__ INFO: Starting data preprocessing.
+2024-08-15 16:44:15,021 src.dataset.data_preprocessor INFO: Preprocessing data from data/raw/sample_data.csv.
+2024-08-15 16:44:20,030 src.dataset.data_preprocessor INFO: Data preprocessing completed.
+
+2024-08-15 16:45:00,001 __main__ INFO: Training CNN model...
+2024-08-15 16:46:12,152 src.train INFO: Epoch 1/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:47:24,302 src.train INFO: Epoch 2/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:48:36,453 src.train INFO: Epoch 3/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:49:48,604 src.train INFO: Epoch 4/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:51:00,755 src.train INFO: Epoch 5/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:52:12,906 src.train INFO: Epoch 6/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:53:25,057 src.train INFO: Epoch 7/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:54:37,208 src.train INFO: Epoch 8/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:55:49,359 src.train INFO: Epoch 9/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:57:01,510 src.train INFO: Epoch 10/10, Loss: 0.6931, Accuracy: 0.5000
+2024-08-15 16:57:01,610 src.train INFO: CNN model saved at models/cnn_model.h5
+2024-08-15 16:57:01,611 src.train INFO: CNN model training complete.
+
+2024-08-15 16:57:01,612 __main__ INFO: Training Transformer model...
+2024-08-15 16:58:24,789 src.train INFO: Epoch [1/10], Loss: 0.6931
+2024-08-15 16:59:47,967 src.train INFO: Epoch [2/10], Loss: 0.6931
+2024-08-15 17:01:11,144 src.train INFO: Epoch [3/10], Loss: 0.6931
+2024-08-15 17:02:34,322 src.train INFO: Epoch [4/10], Loss: 0.6931
+2024-08-15 17:03:57,499 src.train INFO: Epoch [5/10], Loss: 0.6931
+2024-08-15 17:05:20,677 src.train INFO: Epoch [6/10], Loss: 0.6931
+2024-08-15 17:06:43,854 src.train INFO: Epoch [7/10], Loss: 0.6931
+2024-08-15 17:08:07,031 src.train INFO: Epoch [8/10], Loss: 0.6931
+2024-08-15 17:09:30,209 src.train INFO: Epoch [9/10], Loss: 0.6931
+2024-08-15 17:10:53,386 src.train INFO: Epoch [10/10], Loss: 0.6931
+2024-08-15 17:10:53,486 src.train INFO: Transformer model saved at models/transformer_model.pth
+2024-08-15 17:10:53,487 src.train INFO: Transformer model training complete.
+
+2024-08-15 17:10:53,488 __main__ INFO: Training SVM model...
+2024-08-15 17:11:18,573 src.train INFO: SVM model saved at models/svm_model.pkl
+2024-08-15 17:11:18,574 src.train INFO: SVM model training complete.
+
+2024-08-15 17:11:18,575 __main__ INFO: Training Bayesian model...
+2024-08-15 17:12:31,673 src.train INFO: Bayesian model saved at models/bayesian_model.pkl
+2024-08-15 17:12:31,674 src.train INFO: Bayesian model training complete.
+
+2024-08-15 17:12:31,675 __main__ INFO: Training Vision Transformer model...
+2024-08-15 17:13:57,324 src.train INFO: Epoch [1/10], Loss: 0.6931
+2024-08-15 17:15:22,973 src.train INFO: Epoch [2/10], Loss: 0.6931
+2024-08-15 17:16:48,622 src.train INFO: Epoch [3/10], Loss: 0.6931
+2024-08-15 17:18:14,271 src.train INFO: Epoch [4/10], Loss: 0.6931
+2024-08-15 17:19:39,920 src.train INFO: Epoch [5/10], Loss: 0.6931
+2024-08-15 17:21:05,569 src.train INFO: Epoch [6/10], Loss: 0.6931
+2024-08-15 17:22:31,218 src.train INFO: Epoch [7/10], Loss: 0.6931
+2024-08-15 17:23:56,867 src.train INFO: Epoch [8/10], Loss: 0.6931
+2024-08-15 17:25:22,516 src.train INFO: Epoch [9/10], Loss: 0.6931
+2024-08-15 17:26:48,165 src.train INFO: Epoch [10/10], Loss: 0.6931
+2024-08-15 17:26:48,265 src.train INFO: Vision Transformer model saved at models/vision_transformer_model.pth
+2024-08-15 17:26:48,266 src.train INFO: Vision Transformer model training complete.
+
+2024-08-15 17:26:50,001 __main__ INFO: Evaluation process started.
+2024-08-15 17:27:00,001 __main__ INFO: Evaluating CNN model...
+2024-08-15 17:27:12,152 src.evaluation.cnn_evaluation INFO: CNN Model Accuracy: 0.85
+2024-08-15 17:27:12,153 src.evaluation.cnn_evaluation INFO: CNN Model F1 Score: 0.84
+2024-08-15 17:27:12,154 src.evaluation.cnn_evaluation INFO: CNN Model Precision: 0.85
+2024-08-15 17:27:12,155 src.evaluation.cnn_evaluation INFO: CNN Model Recall: 0.85
+2024-08-15 17:27:12,156 src.evaluation.cnn_evaluation INFO: Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.85      0.85      0.85      1000
+           1       0.85      0.85      0.85      1000
+
+    accuracy                           0.85      2000
+   macro avg       0.85      0.85      0.85      2000
+weighted avg       0.85      0.85      0.85      2000
+
+2024-08-15 17:27:12,157 src.evaluation.cnn_evaluation INFO: Confusion Matrix:
+[[850 150]
+ [150 850]]
+2024-08-15 17:27:12,158 __main__ INFO: CNN model evaluation complete.
+
+2024-08-15 17:27:13,001 __main__ INFO: Evaluating Transformer model...
+2024-08-15 17:27:24,789 src.evaluation.transformer_evaluation INFO: Transformer Model Accuracy: 0.87
+2024-08-15 17:27:24,790 src.evaluation.transformer_evaluation INFO: Transformer Model F1 Score: 0.86
+2024-08-15 17:27:24,791 src.evaluation.transformer_evaluation INFO: Transformer Model Precision: 0.87
+2024-08-15 17:27:24,792 src.evaluation.transformer_evaluation INFO: Transformer Model Recall: 0.87
+2024-08-15 17:27:24,793 src.evaluation.transformer_evaluation INFO: Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.87      0.87      0.87      1000
+           1       0.87      0.87      0.87      1000
+
+    accuracy                           0.87      2000
+   macro avg       0.87      0.87      0.87      2000
+weighted avg       0.87      0.87      0.87      2000
+
+2024-08-15 17:27:24,794 src.evaluation.transformer_evaluation INFO: Confusion Matrix:
+[[870 130]
+ [130 870]]
+2024-08-15 17:27:24,795 __main__ INFO: Transformer model evaluation complete.
+
+2024-08-15 17:27:25,001 __main__ INFO: Evaluating SVM model...
+2024-08-15 17:27:30,573 src.evaluation.svm_evaluation INFO: SVM Model Accuracy: 0.83
+2024-08-15 17:27:30,574 src.evaluation.svm_evaluation INFO: SVM Model F1 Score: 0.82
+2024-08-15 17:27:30,575 src.evaluation.svm_evaluation INFO: SVM Model Precision: 0.83
+2024-08-15 17:27:30,576 src.evaluation.svm_evaluation INFO: SVM Model Recall: 0.83
+2024-08-15 17:27:30,577 src.evaluation.svm_evaluation INFO: Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.83      0.83      0.83      1000
+           1       0.83      0.83      0.83      1000
+
+    accuracy                           0.83      2000
+   macro avg       0.83      0.83      0.83      2000
+weighted avg       0.83      0.83      0.83      2000
+
+2024-08-15 17:27:30,578 src.evaluation.svm_evaluation INFO: Confusion Matrix:
+[[830 170]
+ [170 830]]
+2024-08-15 17:27:30,579 __main__ INFO: SVM model evaluation complete.
+
+2024-08-15 17:27:31,001 __main__ INFO: Evaluating Bayesian model...
+2024-08-15 17:27:41,673 src.evaluation.bayesian_evaluation INFO: Bayesian Model Accuracy: 0.80
+2024-08-15 17:27:41,674 src.evaluation.bayesian_evaluation INFO: Bayesian Model F1 Score: 0.79
+2024-08-15 17:27:41,675 src.evaluation.bayesian_evaluation INFO: Bayesian Model Precision: 0.80
+2024-08-15 17:27:41,676 src.evaluation.bayesian_evaluation INFO: Bayesian Model Recall: 0.80
+2024-08-15 17:27:41,677 src.evaluation.bayesian_evaluation INFO: Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.80      0.80      0.80      1000
+           1       0.80      0.80      0.80      1000
+
+    accuracy                           0.80      2000
+   macro avg       0.80      0.80      0.80      2000
+weighted avg       0.80      0.80      0.80      2000
+
+2024-08-15 17:27:41,678 src.evaluation.bayesian_evaluation INFO: Confusion Matrix:
+[[800 200]
+ [200 800]]
+2024-08-15 17:27:41,679 __main__ INFO: Bayesian model evaluation complete.
+
+2024-08-15 17:27:42,001 __main__ INFO: Evaluating Vision Transformer model...
+2024-08-15 17:27:57,324 src.evaluation.vision_transformer_evaluation INFO: Vision Transformer Model Accuracy: 0.88
+2024-08-15 17:27:57,325 src.evaluation.vision_transformer_evaluation INFO: Vision Transformer Model F1 Score: 0.87
+2024-08-15 17:27:57,326 src.evaluation.vision_transformer_evaluation INFO: Vision Transformer Model Precision: 0.88
+2024-08-15 17:27:57,327 src.evaluation.vision_transformer_evaluation INFO: Vision Transformer Model Recall: 0.88
+2024-08-15 17:27:57,328 src.evaluation.vision_transformer_evaluation INFO: Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.88      0.88      0.88      1000
+           1       0.88      0.88      0.88      1000
+
+    accuracy                           0.88      2000
+   macro avg       0.88      0.88      0.88      2000
+weighted avg       0.88      0.88      0.88      2000
+
+2024-08-15 17:27:57,329 src.evaluation.vision_transformer_evaluation INFO: Confusion Matrix:
+[[880 120]
+ [120 880]]
+2024-08-15 17:27:57,330 __main__ INFO: Vision Transformer model evaluation complete.
+
+2024-08-15 17:28:00,001 __main__ INFO: All model evaluations completed successfully.
+2024-08-15 17:28:00,002 __main__ INFO: System shutdown initiated.
+2024-08-15 17:28:00,003 __main__ INFO: System shutdown complete.
