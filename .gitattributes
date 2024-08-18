@@ -1,0 +1,64 @@
+* text=auto
+
+* text=auto
+
+*.sh text eol=lf
+
+*.py text eol=lf
+
+*.md text eol=lf
+
+*.yml text eol=lf
+*.yaml text eol=lf
+
+*.md diff=markdown
+*.py diff=python
+
+*.ipynb diff=jupyter-notebook
+
+# Binary files
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.ppt binary
+*.pptx binary
+*.zip binary
+*.tar binary
+*.gz binary
+*.bz2 binary
+*.7z binary
+
+*.h5 binary
+*.pth binary
+*.pkl binary
+
+*.wav binary
+*.mp3 binary
+*.aac binary
+*.flac binary
+
+*.mp4 binary
+*.avi binary
+*.mkv binary
+*.mov binary
+
+*.exe binary
+*.dll binary
+*.bin binary
+
+*.csv diff=csv
+
+.env text
+
+*.log text eol=lf
+
+*.cfg text eol=lf
+*.conf text eol=lf
+
+*.json text eol=lf
